@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div>
+    <div><p>All rooms: {{rooms}}</p></div>
+    <br>
+    <p>Room info:</p>    
+    <br>
+    {% for buy in buyings %}
+    <div><p>Seller: {{buy.seller}}</p></div>
+    <div><p>Room revenue: {{buy.room_revenue}} RUB.</p></div>
+    <div><p>Buyers: {{buy.buyers}}</p></div>
+    <br>
+    {% endfor %}
+    <div><p>Total revenue of all sellers = {{total}}</p></div>
+</div>
+{% endblock %}
